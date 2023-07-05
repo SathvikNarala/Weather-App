@@ -57,6 +57,8 @@ class _ClimaState extends State<Clima> {
         ),
       ),
 
+      resizeToAvoidBottomInset: false,
+      
       body: BlocBuilder<AppBloc, AppState>(
         builder: (context, state){
           return state.loading ? const Center(
@@ -74,7 +76,7 @@ class _ClimaState extends State<Clima> {
             constraints: const BoxConstraints.expand(),
             child: SafeArea(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Row(
