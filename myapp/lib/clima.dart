@@ -25,7 +25,7 @@ class _ClimaState extends State<Clima> {
     Data data = await Location.getCurrentLocation(city);
     
     setState(() {
-      if(data.city == 'Phone'){
+      if(data.city == ''){
         _condition = 'Unable to get Weather Data';
         _icon = '❌';
       }

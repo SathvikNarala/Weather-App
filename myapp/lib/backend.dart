@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 class Location{
 
   static Future<Data> getCurrentLocation(String city) async{
-    Data data = Data(100, -1, 'Phone');
+    Data data = Data(100, -1, '');
 
     LocationPermission check = await Geolocator.checkPermission();
     
