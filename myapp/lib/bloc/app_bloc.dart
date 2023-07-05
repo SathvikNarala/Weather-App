@@ -28,7 +28,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
     });
 
     on<CityEvent>((event, emit) async{
-      Data data = await Location.getCurrentLocation('');
+      Data data = await Location.getCurrentLocation(event.city);
 
       if(data.city == ''){
         emit(const AppError());
